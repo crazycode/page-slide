@@ -77,8 +77,8 @@ zh:
       password_confirmation: Password confirmation
       language: Language
 
-  # 环境页面
-  envs:
+  # Slide页面
+  slides:
     index:
       title: "全部{{model}}"
       operation: 操作
@@ -96,10 +96,8 @@ zh:
     show:
       title: "{{model}}详情"
 
-  # 项目页面
-  projects:
-    form:
-      jira_key_hint: 使用JIRA的Key值，通过此值关联问题修改记录。如果不设置，不关联。
+  # Page页面
+  pages:
     index:
       title: "全部{{model}}"
       operation: 操作
@@ -117,11 +115,6 @@ zh:
     show:
       title: "{{model}}详情"
 
-  building_define_fields:
-    new:
-      title: 新增构建自定义字段
-    show:
-      title: 查看{{name}}构建自定义字段
   date:
     formats:
       default: "%Y-%m-%d"
@@ -223,28 +216,22 @@ zh:
 
   activerecord:
     models:
-      building_type: 构建类型
-      building_define_field: 构建自定义字段
-      env: 环境
-      env_component: 环境组件变更
-      project: 项目
+      slide: 展示
+      page: 页面
     attributes:
-      building_define_field:
-        name: 名称
-        description: 备注
-      env:
-        code: 代码
-        title: 名称
-        description: 说明
-      env_component:
-        svn_tag_url: 当前svn tag地址
-      project:
-        code: 编码
-        name: 名称
-        jira_key: JIRA Key
-        leader_id: 项目负责人
-        base_svn_url: SVN基路径
-        current_version: 当前版本
+      slide:
+        title: 标题
+        screen_width: 屏幕宽度
+        screen_height: 屏幕高度
+        page_count: 页面数
+      page:
+        title: 标题
+        sub_title: 子标题
+        hint: 提示信息
+        url: URL
+        page_type: 页面类型
+        show_timeout: 显示时长(ms)
+        positions: 序号
 
     errors:
       template:

@@ -1,56 +1,17 @@
 <div class="global_navigation"><%
   render_tabnav :global do
-    if logged_in?
-      add_tab do |t|
-        t.named t('.home')
-        t.links_to APP_CONFIG['home_url']
-        t.tab_index = '50'
-      end if APP_CONFIG.has_key? 'home_url'
+    add_tab do |t|
+      t.named t('.home')
+      t.links_to APP_CONFIG['home_url']
+      t.tab_index = '50'
+    end if APP_CONFIG.has_key? 'home_url'
 
-      add_tab do |t|
-        t.named t('.projects')
-        t.links_to projects_path
-        t.tab_index = '60'
-        t.highlights_on :controller => 'projects'
-        t.highlights_on :controller => 'components'
-      end
-
-      add_tab do |t|
-        t.named t('.properties')
-        t.links_to properties_path
-        t.tab_index = '70'
-        t.highlights_on :controller => 'properties', :action => 'index'
-      end
-
-      add_tab do |t|
-        t.named t('.versions')
-        t.links_to versions_path
-        t.highlights_on :controller => 'versions'
-        t.tab_index = '68'
-      end
-
-      add_tab do |t|
-        t.named t('.users')
-        t.links_to users_path
-        t.tab_index = '65'
-        t.highlights_on :controller => 'users', :action => 'index'
-      end
-
-      add_tab do |t|
-        t.named t('.env')
-        t.links_to envs_path
-        t.highlights_on :controller => 'envs'
-        t.tab_index = '53'
-      end
-
-      add_tab do |t|
-        t.named t('.building_types')
-        t.links_to building_types_path
-        t.highlights_on :controller => 'building_types'
-        t.highlights_on :controller => 'building_define_fields'
-        t.tab_index = '40'
-      end
-
+    add_tab do |t|
+      t.named t('.slides')
+      t.links_to slides_path
+      t.tab_index = '10'
+      t.highlights_on :controller => 'slides'
+      t.highlights_on :controller => 'pages'
     end
   end
 %><div class="clear"></div></div>

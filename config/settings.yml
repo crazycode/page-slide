@@ -7,9 +7,9 @@
 # You can override them individually under development, test or production.
 defaults: &DEFAULTS
   # The domain from where your app is served from.
-  app_domain: config.5173dev.com
+  app_domain: slideshow.5173dev.com
 
-  app_name: FostConfig配置管理系统
+  app_name: Fost Slide Show
 
   # Configuration for outgoing mail
   # By default, will send emails in production mode but not in development.
@@ -35,15 +35,15 @@ defaults: &DEFAULTS
     pass:
 
   # This links are used in the navigation bar for login and in every page's footer
-  home_url: /versions
-  support_url: http://config.5173dev.com
-  help_url: http://config.5173dev.com
+  home_url: /
+  support_url: http://slideshow.5173dev.com
+  help_url: http://slideshow.5173dev.com
 
   # If false, the only way of having an account will be being invited by another user.
   allow_signups: true
 
   # Address where your users should write to ask for help. Accepts an email or website.
-  support: http://config.5173dev.com
+  support: http://slideshow.5173dev.com
 
   time_zone: UTC
 
@@ -54,7 +54,7 @@ development:
 
 production:
   <<: *DEFAULTS
-  app_domain: config.5173dev.com
+  app_domain: slideshow.5173dev.com
 
 test: &TEST
   <<: *DEFAULTS
