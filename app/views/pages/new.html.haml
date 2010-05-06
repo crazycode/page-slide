@@ -1,3 +1,4 @@
 %h1= t('.title', :model => Page.human_name)
 
-= render :partial => "form"
+- semantic_form_for(current_object, :url => objects_url, :html => { :method => :post }) do |f|
+  = render :partial => "form", :locals => {:f => f}

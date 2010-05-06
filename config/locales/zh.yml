@@ -45,12 +45,8 @@ zh:
 
   shared:
     global_navigation:
-      env: 环境
-      versions: 版本清单
-      projects: 项目
-      users: 用户
-      properties: 属性查询
-      building_types: 构建类型
+      slides: 展示
+      pages: 页面
       home: 首页
       login: 登录
       signup: 创建帐号
@@ -84,10 +80,11 @@ zh:
       operation: 操作
       create_link: "创建{{model}}"
     share:
-      show: 查看
+      show: 直接播放
       edit: 修改
       delete: 删除
       delete_confirm: "您确信要删除此记录？"
+      pages: 页面
       back: 返回
     new:
       title: "新增{{model}}"
@@ -223,7 +220,7 @@ zh:
         title: 标题
         screen_width: 屏幕宽度
         screen_height: 屏幕高度
-        page_count: 页面数
+        pages_count: 页面数
       page:
         title: 标题
         sub_title: 子标题

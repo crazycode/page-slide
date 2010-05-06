@@ -1,14 +1,13 @@
-- semantic_form_for current_object do |f|
-  - f.inputs do
-    = f.input :title
-    = f.input :sub_title
-    = f.input :hint
-    = f.input :url
-    = f.input :page_type
-    = f.input :positions
-    = f.input :slide_id
-    = f.input :show_timeout
-  - f.buttons do
-    = f.commit_button
-    %li
-      = link_to t('pages.share.back'), objects_path
+- f.inputs do
+  = f.input :title
+  = f.input :sub_title
+  = f.input :hint
+  = f.input :url
+  = f.input :page_type
+  = f.input :positions
+  = f.input :slide_id
+  = f.input :show_timeout
+- f.buttons do
+  = f.commit_button
+  %li
+    = link_to t('pages.share.back'), objects_path

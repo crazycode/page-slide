@@ -10,9 +10,9 @@
   %p.screen_height
     %strong= Slide.human_attribute_name(:screen_height)
     = h current_object.screen_height
-  %p.page_count
-    %strong= Slide.human_attribute_name(:page_count)
-    = h current_object.page_count
+  %p.pages_count
+    %strong= Slide.human_attribute_name(:pages_count)
+    = h current_object.pages_count
 
 = link_to t('slides.share.edit'), edit_object_path(current_object)
 |

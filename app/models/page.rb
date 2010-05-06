@@ -16,4 +16,5 @@
 #
 
 class Page < ActiveRecord::Base
+  belongs_to :slide, :counter_cache => true
 end
