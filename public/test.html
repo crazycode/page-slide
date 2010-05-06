@@ -12,40 +12,30 @@
 // call cycle immediately, without a ready handler
 $('#slideshow').cycle({
     fx:     'all',
-    timeout: 2000,
-    speed:   300
+    timeout: 5000,
+    speed:   500
 });
 </script>
 
 <style type="text/css">
-#slideshow { margin: 30px auto }
-#main { margin: auto 100px; padding: 20px }
+#slideshow { margin: 0px auto }
+#main { margin: auto 0px; padding: 0px }
 </style>
 </head>
 <body>
-<div><a id="logo" href="http://jquery.com" title="Powered By jQuery"></a></div>
 <div id="main">
-
     <div id="slideshow" class="pics">
-        <img src="http://cloud.github.com/downloads/malsup/cycle/beach1.jpg" width="200" height="200" />
-        <img src="http://cloud.github.com/downloads/malsup/cycle/beach2.jpg" width="200" height="200" />
-        <img src="http://cloud.github.com/downloads/malsup/cycle/beach3.jpg" width="200" height="200" />
+<!--        <div><img src="http://cloud.github.com/downloads/malsup/cycle/beach1.jpg" width="200" height="200" /></div>
+        <div><img src="http://cloud.github.com/downloads/malsup/cycle/beach2.jpg" width="200" height="200" /></div>
+        <div><img src="http://cloud.github.com/downloads/malsup/cycle/beach3.jpg" width="200" height="200" /></div>
+        -->
+      <div>
+        <iframe src="http://www.5173.cn" width="100%" scrolling ="no" height="100%"></iframe>
+      </div>
+      <div>
+        <iframe src="http://fost.5173.com/jira/secure/ChartBoard.jspa?start=&type=CCB&selectedProjectId=10190&selectedBoardId=10483&issueDisplay=" width="100%" scrolling ="no" height="100%"></iframe>
+      </div>
     </div>
-
-<pre><code class="mix">
-&lt;head&gt;
-&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-
-$('#slideshow').cycle({
-    fx:     'all',
-    timeout: 2000,
-    speed:   300
-});
-
-&lt;/script&gt;
-&lt;/head&gt;
-</code></pre>
 </div>
 </body>
 </html>

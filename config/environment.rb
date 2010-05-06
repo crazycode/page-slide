@@ -7,6 +7,7 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -38,4 +39,21 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  config.i18n.default_locale = :zh
+
+  if APP_CONFIG['allow_outgoing_email']
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+     :address        => APP_CONFIG['outgoing']['host'],
+     :port           => APP_CONFIG['outgoing']['port'],
+     :domain         => APP_CONFIG['outgoing']['from'],
+     :user_name      => APP_CONFIG['outgoing']['user'],
+     :password       => APP_CONFIG['outgoing']['pass'],
+     :authentication => APP_CONFIG['outgoing']['auth'].to_sym
+    }
+  end
+
+  require 'RedCloth'
+  require 'mime/types'
+
 end

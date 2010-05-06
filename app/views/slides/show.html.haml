@@ -1,0 +1,21 @@
+%h1= t('.title', :model => Slide.human_name)
+
+%div[current_object]
+  %p.title
+    %strong= Slide.human_attribute_name(:title)
+    = h current_object.title
+  %p.screen_width
+    %strong= Slide.human_attribute_name(:screen_width)
+    = h current_object.screen_width
+  %p.screen_height
+    %strong= Slide.human_attribute_name(:screen_height)
+    = h current_object.screen_height
+  %p.page_count
+    %strong= Slide.human_attribute_name(:page_count)
+    = h current_object.page_count
+
+= link_to t('slides.share.edit'), edit_object_path(current_object)
+|
+= link_to t('slides.share.delete'), object_path(current_object), :confirm => t('slides.share.delete_confirm', :model => Slide.human_name), :method => :delete
+|
+= link_to t('slides.share.back'), objects_path

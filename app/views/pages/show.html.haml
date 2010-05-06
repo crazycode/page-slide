@@ -1,0 +1,33 @@
+%h1= t('.title', :model => Page.human_name)
+
+%div[current_object]
+  %p.title
+    %strong= Page.human_attribute_name(:title)
+    = h current_object.title
+  %p.sub_title
+    %strong= Page.human_attribute_name(:sub_title)
+    = h current_object.sub_title
+  %p.hint
+    %strong= Page.human_attribute_name(:hint)
+    = h current_object.hint
+  %p.url
+    %strong= Page.human_attribute_name(:url)
+    = h current_object.url
+  %p.page_type
+    %strong= Page.human_attribute_name(:page_type)
+    = h current_object.page_type
+  %p.positions
+    %strong= Page.human_attribute_name(:positions)
+    = h current_object.positions
+  %p.slide_id
+    %strong= Page.human_attribute_name(:slide_id)
+    = h current_object.slide_id
+  %p.show_timeout
+    %strong= Page.human_attribute_name(:show_timeout)
+    = h current_object.show_timeout
+
+= link_to t('pages.share.edit'), edit_object_path(current_object)
+|
+= link_to t('pages.share.delete'), object_path(current_object), :confirm => t('pages.share.delete_confirm', :model => Page.human_name), :method => :delete
+|
+= link_to t('pages.share.back'), objects_path

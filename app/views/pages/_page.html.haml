@@ -1,0 +1,23 @@
+%tr
+  %td
+    = h page.title
+  %td
+    = h page.sub_title
+  %td
+    = h page.hint
+  %td
+    = h page.url
+  %td
+    = h page.page_type
+  %td
+    = h page.positions
+  %td
+    = h page.slide_id
+  %td
+    = h page.show_timeout
+  %td
+    = link_to t('pages.share.show'), object_path(page)
+    |
+    = link_to t('pages.share.edit'), edit_object_path(page)
+    |
+    = link_to t('pages.share.delete'), object_path(page), :confirm => t('pages.share.delete_confirm', :model => Page.human_name), :method => :delete

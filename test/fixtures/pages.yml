@@ -1,0 +1,20 @@
+one:
+  id: 1
+  title: MyString
+  sub_title: MyString
+  hint: MyString
+  url: MyString
+  page_type: MyString
+  positions: 1
+  slide_id: 1
+  show_timeout: 1
+two:
+  id: 2
+  title: MyString
+  sub_title: MyString
+  hint: MyString
+  url: MyString
+  page_type: MyString
+  positions: 1
+  slide_id: 1
+  show_timeout: 1

@@ -1,0 +1,65 @@
+#
+# This file takes care of some key strings for the interface and app.
+# You will also need to edit environment.rb with your own email settings.
+#
+
+# This block defines defaults, shared for all environments.
+# You can override them individually under development, test or production.
+defaults: &DEFAULTS
+  # The domain from where your app is served from.
+  app_domain: config.5173dev.com
+
+  app_name: FostConfig配置管理系统
+
+  # Configuration for outgoing mail
+  # By default, will send emails in production mode but not in development.
+  allow_outgoing_email: true
+  outgoing:
+    from: from.server.com
+    host: smtp.sendmail.com
+    user:
+    pass:
+    auth: plain                 # choose: plain, login, cram_md5
+    port: 25
+
+  # Set allow to true to allow the "reply to" feature for notifications.
+  # This will allow users to post answers and comments by email.
+  # When set to true, "reply above this line" notice will be displayed where relevant and accept emails.
+  # You will need to set up:
+  # * A catch-all address for email received for any username of the incoming mail server.
+  # * A cron job to run script/inbox periodically to get email.
+  allow_incoming_email: false
+  incoming:
+    host: pop.receivemail.com
+    user:
+    pass:
+
+  # This links are used in the navigation bar for login and in every page's footer
+  home_url: /versions
+  support_url: http://config.5173dev.com
+  help_url: http://config.5173dev.com
+
+  # If false, the only way of having an account will be being invited by another user.
+  allow_signups: true
+
+  # Address where your users should write to ask for help. Accepts an email or website.
+  support: http://config.5173dev.com
+
+  time_zone: UTC
+
+development:
+  <<: *DEFAULTS
+  app_domain: localhost:3000
+  allow_outgoing_email: false
+
+production:
+  <<: *DEFAULTS
+  app_domain: config.5173dev.com
+
+test: &TEST
+  <<: *DEFAULTS
+  app_domain: 127.0.0.1
+  allow_outgoing_email: false
+  asset_max_file_size: 1
+cucumber:
+  <<: *TEST

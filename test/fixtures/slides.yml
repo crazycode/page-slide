@@ -1,0 +1,12 @@
+one:
+  id: 1
+  title: MyString
+  screen_width: 1
+  screen_height: 1
+  page_count: 1
+two:
+  id: 2
+  title: MyString
+  screen_width: 1
+  screen_height: 1
+  page_count: 1

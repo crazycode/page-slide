@@ -1,0 +1,11 @@
+.user_nav
+  - if logged_in?
+    = link_to "欢迎您，#{current_user.name}", root_path, :class => 'welcome'
+    = link_to t('.logout'), logout_path
+  - else
+    = '请使用统一认证用户名登录'
+
+.header
+  %h1
+    = link_to content_tag(:span,APP_CONFIG['app_name']), root_path, :tabindex => 1
+    %span#title-text #{APP_CONFIG['app_name']}

@@ -1,0 +1,15 @@
+%tr
+  %td
+    = h slide.title
+  %td
+    = h slide.screen_width
+  %td
+    = h slide.screen_height
+  %td
+    = h slide.page_count
+  %td
+    = link_to t('slides.share.show'), object_path(slide)
+    |
+    = link_to t('slides.share.edit'), edit_object_path(slide)
+    |
+    = link_to t('slides.share.delete'), object_path(slide), :confirm => t('slides.share.delete_confirm', :model => Slide.human_name), :method => :delete
