@@ -1,0 +1,11 @@
+%tr
+<% for attribute in attributes -%>
+  %td
+    = h <%= singular_name %>.<%= attribute.name %>
+<% end -%>
+  %td
+    = link_to t('<%= table_name %>.share.show'), object_path(<%= singular_name %>)
+    |
+    = link_to t('<%= table_name %>.share.edit'), edit_object_path(<%= singular_name %>)
+    |
+    = link_to t('<%= table_name %>.share.delete'), object_path(<%= singular_name %>), :confirm => t('<%= table_name %>.share.delete_confirm', :model => <%= class_name %>.human_name), :method => :delete

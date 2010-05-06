@@ -1,0 +1,7 @@
+h1. Modified Restful Authentication Generator
+
+"The original Rails plugin can be found here.":http://github.com/technoweenie/restful-authentication
+
+h2. Introduced Enhancements
+
+* Optional @--haml@ generator

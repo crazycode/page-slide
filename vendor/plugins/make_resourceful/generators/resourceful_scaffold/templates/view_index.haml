@@ -1,0 +1,11 @@
+%h1= t('.title', :model => <%= class_name %>.human_name)
+
+%table
+  %tr
+<% for attribute in attributes -%>
+    %th= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
+<% end -%>
+    %th= t(".operation")
+  = render :partial => '<%= singular_name %>', :collection => current_objects
+
+= link_to t('.create_link', :model => <%= class_name %>.human_name), new_object_path

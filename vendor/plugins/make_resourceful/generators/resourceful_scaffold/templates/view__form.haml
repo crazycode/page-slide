@@ -1,0 +1,9 @@
+- semantic_form_for current_object do |f|
+  - f.inputs do
+<%- for attribute in attributes -%>
+    = f.input :<%= attribute.name %>
+<% end -%>
+  - f.buttons do
+    = f.commit_button
+    %li
+      = link_to t('<%= table_name %>.share.back'), objects_path

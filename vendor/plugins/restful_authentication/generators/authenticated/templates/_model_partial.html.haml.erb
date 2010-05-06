@@ -1,0 +1,12 @@
+- if logged_in?
+  %div#<%= file_name %>-bar-greeting
+    Logged in as
+    = link_to_current_<%= file_name %> :content_method => :login
+  %div#<%= file_name %>-bar-action
+    = "(#{link_to "log out", logout_path, { :title => "Log out" }})"
+- else
+  %div#<%= file_name %>-bar-greeting
+    = link_to_login_with_IP 'Not logged in', :style => "border: none;"
+  %div#<%= file_name %>-bar-action
+    = link_to "Log in", login_path
+    = "/" + link_to "Sign up", signup_path, { :title => "Create an account" }
