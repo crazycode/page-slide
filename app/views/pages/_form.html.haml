@@ -1,12 +1,10 @@
 - f.inputs do
   = f.input :title
-  = f.input :sub_title
-  = f.input :hint
   = f.input :url
-  = f.input :page_type
-  = f.input :positions
-  = f.input :slide_id
-  = f.input :show_timeout
+  -# = f.input :sub_title
+  -# = f.input :hint
+  = f.input :page_type, :as => :radio, :collection=>['webpage','image']
+  = f.input :show_timeout, :hint => '默认为5000ms，即5秒'
 - f.buttons do
   = f.commit_button
   %li
