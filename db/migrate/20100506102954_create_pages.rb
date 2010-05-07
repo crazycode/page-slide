@@ -6,7 +6,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :hint
       t.string :url
       t.string :page_type
-      t.integer :positions
+      t.integer :position
       t.integer :slide_id
       t.integer :show_timeout
 

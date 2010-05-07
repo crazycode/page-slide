@@ -6,7 +6,7 @@
 #  title         :string(255)
 #  screen_width  :integer(4)
 #  screen_height :integer(4)
-#  page_count    :integer(4)
+#  pages_count   :integer(4)      default(0)
 #  created_at    :datetime
 #  updated_at    :datetime
 #

@@ -8,7 +8,7 @@
 #  hint         :string(255)
 #  url          :string(255)
 #  page_type    :string(255)
-#  positions    :integer(4)
+#  position     :integer(4)
 #  slide_id     :integer(4)
 #  show_timeout :integer(4)
 #  created_at   :datetime
