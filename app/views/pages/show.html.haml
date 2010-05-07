@@ -4,12 +4,12 @@
   %p.title
     %strong= Page.human_attribute_name(:title)
     = h current_object.title
-  %p.sub_title
-    %strong= Page.human_attribute_name(:sub_title)
-    = h current_object.sub_title
-  %p.hint
-    %strong= Page.human_attribute_name(:hint)
-    = h current_object.hint
+  -#   %p.sub_title
+  -#     %strong= Page.human_attribute_name(:sub_title)
+  -#     = h current_object.sub_title
+  -#   %p.hint
+  -#     %strong= Page.human_attribute_name(:hint)
+  -#     = h current_object.hint
   %p.url
     %strong= Page.human_attribute_name(:url)
     = h current_object.url

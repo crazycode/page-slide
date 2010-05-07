@@ -6,10 +6,12 @@
   %td
     = h slide.screen_height
   %td
-    = h slide.page_count
+    = h slide.pages_count
   %td
-    = link_to t('slides.share.show'), object_path(slide)
+    = link_to t('slides.share.pages'), slide_pages_path(slide)
     |
     = link_to t('slides.share.edit'), edit_object_path(slide)
     |
     = link_to t('slides.share.delete'), object_path(slide), :confirm => t('slides.share.delete_confirm', :model => Slide.human_name), :method => :delete
+    |
+    = link_to t('slides.share.show'), object_path(slide)

@@ -4,7 +4,7 @@ class CreateSlides < ActiveRecord::Migration
       t.string :title
       t.integer :screen_width
       t.integer :screen_height
-      t.integer :page_count
+      t.integer :pages_count, :default => 0
 
       t.timestamps
     end

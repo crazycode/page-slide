@@ -3,12 +3,10 @@
 %table
   %tr
     %th= Page.human_attribute_name(:title)
-    %th= Page.human_attribute_name(:sub_title)
-    %th= Page.human_attribute_name(:hint)
+    -# %th= Page.human_attribute_name(:sub_title)
+    -# %th= Page.human_attribute_name(:hint)
     %th= Page.human_attribute_name(:url)
     %th= Page.human_attribute_name(:page_type)
-    %th= Page.human_attribute_name(:positions)
-    %th= Page.human_attribute_name(:slide_id)
     %th= Page.human_attribute_name(:show_timeout)
     %th= t(".operation")
   = render :partial => 'page', :collection => current_objects

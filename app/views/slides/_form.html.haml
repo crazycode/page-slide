@@ -1,9 +1,8 @@
 - semantic_form_for current_object do |f|
   - f.inputs do
     = f.input :title
-    = f.input :screen_width
-    = f.input :screen_height
-    = f.input :page_count
+    = f.input :screen_width, :hint => '目标屏幕宽度，如1024'
+    = f.input :screen_height, :hint => '目标屏幕高度，如768'
   - f.buttons do
     = f.commit_button
     %li

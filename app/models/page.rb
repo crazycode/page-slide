@@ -16,4 +16,8 @@
 #
 
 class Page < ActiveRecord::Base
+  validates_presence_of :title, :url, :page_type
+  validates_uniqueness_of :title
+
+  belongs_to :slide, :counter_cache => true
 end
