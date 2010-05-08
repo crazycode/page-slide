@@ -1,0 +1,15 @@
+- content_for :javascript do
+  :javascript
+    // call cycle immediately, without a ready handler
+    $('#slideshow').cycle({
+      fx:     'all',
+      timeout: 5000,
+      speed:   500
+    });
+
+.main
+  .pics#slideshow
+    - current_object.pages.each do |page|
+      - if "webpage".eql? page.page_type
+        %div
+          %iframe{:src => page.url, :width => "100%", :scrolling => "no", :height => "100%"}

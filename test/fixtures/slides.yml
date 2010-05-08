@@ -2,11 +2,11 @@
 #
 # Table name: slides
 #
-#  id            :integer         not null, primary key
+#  id            :integer(4)      not null, primary key
 #  title         :string(255)
-#  screen_width  :integer
-#  screen_height :integer
-#  pages_count   :integer         default(0)
+#  screen_width  :integer(4)
+#  screen_height :integer(4)
+#  pages_count   :integer(4)      default(0)
 #  created_at    :datetime
 #  updated_at    :datetime
 #

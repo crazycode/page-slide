@@ -1,0 +1,19 @@
+body { padding-bottom: 0px }
+#main { background: #fff; margin: 0 0px 0px 0px }
+#header { background-color: #eee; font-weight: normal; margin:0; padding:0px; font-size: small }
+
+table { margin: auto; border-collapse: separate; border-spacing: 20px }
+td { vertical-align: top; text-align:center; width: 235px }
+
+pre { text-align: left; overflow: visible }
+code { background-color: #ffc }
+pre code { background-color: #eee }
+
+.pics { height: 600px; width: 960px; padding:0; margin:0; overflow: hidden }
+.pics img { height: 585px; width: 945px; padding: 15px; border: 1px solid #ccc; background-color: #eee; top:0; left:0 }
+.pics img {
+        -moz-border-radius: 10px; -webkit-border-radius: 10px;
+}
+
+#slideshow { margin: 0px auto }
+#main { margin: auto 0px; padding: 0px }
