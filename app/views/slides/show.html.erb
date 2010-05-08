@@ -1,0 +1,33 @@
+<% content_for :javascript do %>
+<script type="text/javascript">
+// call cycle immediately, without a ready handler
+$('#slideshow').cycle({
+    fx:     'all',
+    timeout: 5000,
+    speed:   500
+});
+</script>
+
+<style type="text/css">
+#slideshow { margin: 0px auto }
+#main { margin: auto 0px; padding: 0px }
+</style>
+
+<% end -%>
+
+<div id="main">
+    <div id="slideshow" class="pics">
+<!--        <div><img src="http://cloud.github.com/downloads/malsup/cycle/beach1.jpg" width="200" height="200" /></div>
+        <div><img src="http://cloud.github.com/downloads/malsup/cycle/beach2.jpg" width="200" height="200" /></div>
+        <div><img src="http://cloud.github.com/downloads/malsup/cycle/beach3.jpg" width="200" height="200" /></div>
+        -->
+<% current_object.pages.each do |page| -%>
+  <% if "image".eql? page.page_type -%>
+  <% else -%>
+      <div>
+        <iframe src="<%= page.url %>" width="100%" scrolling ="no" height="100%"></iframe>
+      </div>
+  <% end -%>
+<% end -%>
+    </div>
+</div>

@@ -7,5 +7,11 @@ class SlidesController < ApplicationController
         redirect_to :action => "index"
       }
     end
+
+    response_for :show do |format|
+      format.html {
+        render :layout => "slide"
+      }
+    end
   end
 end
