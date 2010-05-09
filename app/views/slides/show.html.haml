@@ -3,8 +3,17 @@
     // call cycle immediately, without a ready handler
     $('#slideshow').cycle({
       fx:     'all',
-      timeout: 8000,
-      speed:   800
+      timeout: 3000,
+      speed:   800,
+      after: function(currSlideElement, nextSlideElement, options, forwardFlag) {
+        var frm = nextSlideElement.find(".slide_frame");
+        if (frm.length() > 0) {
+          alert('aa');
+          frm.window.location.reload();
+        } else {
+          alert('hh');
+        }
+      }
     });
 
 .main
@@ -12,4 +21,4 @@
     - current_object.pages.each do |page|
       - if "webpage".eql? page.page_type
         %div
-          %iframe{:src => page.url, :width => (current_object.screen_width-35), :scrolling => "no", :height => (current_object.screen_height-40)}
+          %iframe{:src => page.url, :class => "slide_frame", :scrolling => "no", :width => (current_object.screen_width-35), :height => (current_object.screen_height-40)}
