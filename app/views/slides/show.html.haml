@@ -3,8 +3,8 @@
     // call cycle immediately, without a ready handler
     $('#slideshow').cycle({
       fx:     'all',
-      timeout: 5000,
-      speed:   500
+      timeout: 8000,
+      speed:   800
     });
 
 .main
@@ -12,4 +12,4 @@
     - current_object.pages.each do |page|
       - if "webpage".eql? page.page_type
         %div
-          %iframe{:src => page.url, :width => "100%", :scrolling => "no", :height => "100%"}
+          %iframe{:src => page.url, :width => (current_object.screen_width-35), :scrolling => "no", :height => (current_object.screen_height-40)}

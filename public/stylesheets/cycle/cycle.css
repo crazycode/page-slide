@@ -1,4 +1,8 @@
-body { padding-bottom: 0px }
+body {
+    padding-bottom: 0px;
+    overflow: hidden;
+    height: 100%;
+}
 #main { background: #fff; margin: 0 0px 0px 0px }
 #header { background-color: #eee; font-weight: normal; margin:0; padding:0px; font-size: small }
 
@@ -9,9 +13,9 @@ pre { text-align: left; overflow: visible }
 code { background-color: #ffc }
 pre code { background-color: #eee }
 
-.pics { height: 600px; width: 960px; padding:0; margin:0; overflow: hidden }
-.pics img { height: 585px; width: 945px; padding: 15px; border: 1px solid #ccc; background-color: #eee; top:0; left:0 }
-.pics img {
+.pics {  padding:0; margin:0; overflow: hidden }
+.pics div { padding: 15px; border: 1px solid #ccc; background-color: #eee; top:0; left:0 }
+.pics div {
         -moz-border-radius: 10px; -webkit-border-radius: 10px;
 }
 
