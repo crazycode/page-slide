@@ -1,8 +1,8 @@
 class LoadTestData < ActiveRecord::Migration
   def self.up
     slide = Slide.create(:title => '测试展示',
-                         :screen_width => 768,
-                         :screen_height => 1024)
+                         :screen_width => 1024,
+                         :screen_height => 768)
     Page.create(:title => 'google',
                 :url => 'http://www.google.com/ncr',
                 :page_type => 'webpage',

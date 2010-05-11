@@ -15,5 +15,5 @@ class Slide < ActiveRecord::Base
   validates_presence_of :title
   validates_uniqueness_of :title
 
-  has_many :pages, :order => "position", :dependent => :destroy
+  has_many :pages, :order => "id, position", :dependent => :destroy
 end

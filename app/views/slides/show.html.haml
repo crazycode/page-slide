@@ -6,12 +6,9 @@
       timeout: 3000,
       speed:   800,
       after: function(currSlideElement, nextSlideElement, options, forwardFlag) {
-        var frm = nextSlideElement.find(".slide_frame");
-        if (frm.length() > 0) {
-          alert('aa');
-          frm.window.location.reload();
-        } else {
-          alert('hh');
+        var frm = $("#iframe_" + currSlideElement.id);
+        if (frm != null) {
+          $(frm).attr("src", $(frm).attr("src"));
         }
       }
     });
@@ -20,5 +17,8 @@
   .pics#slideshow
     - current_object.pages.each do |page|
       - if "webpage".eql? page.page_type
-        %div
-          %iframe{:src => page.url, :class => "slide_frame", :scrolling => "no", :width => (current_object.screen_width-35), :height => (current_object.screen_height-40)}
+        %div{:id => "id_#{page.id}"}
+          %iframe{:id => "iframe_id_#{page.id}", :src => page.url, :class => "slide_frame", :scrolling => "no", :width => (current_object.screen_width-35), :height => (current_object.screen_height-40)}
+      - elsif "image".eql? page.page_type
+        %div{:id => "id_#{page.id}"}
+          %img{:id => "img_id_#{page.id}", :src => page.url, :width => (current_object.screen_width-35), :height => (current_object.screen_height-40)}
