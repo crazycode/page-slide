@@ -24,7 +24,7 @@ set :use_sudo, true
 desc "Link in the production database.yml"
 task :after_update_code do
   sudo "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
-  run "cd #{release_path} && ruby -rconfig/environment -e ‘Sass::Plugin.updatestylesheets'"
+  run "cd #{release_path} && ruby -rconfig/environment -e 'Sass::Plugin.updatestylesheets'"
   sudo "chown -R www-data:www-data #{release_path}"
   #sudo "chown -R www-data:www-data #{release_path}/tmp"
 end
