@@ -3,10 +3,12 @@
 %table
   %tr
     %th= Slide.human_attribute_name(:title)
-    %th= Slide.human_attribute_name(:screen_width)
-    %th= Slide.human_attribute_name(:screen_height)
     %th= Slide.human_attribute_name(:pages_count)
     %th= t(".operation")
   = render :partial => 'slide', :collection => current_objects
 
 = link_to t('.create_link', :model => Slide.human_name), new_object_path
+
+%p
+  %b 请注意
+  如果页面有需要登录的，请先进入“页面”列表，点开各页面先登录，然后回到这里点击“直接播放”

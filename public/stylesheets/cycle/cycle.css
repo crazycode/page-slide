@@ -1,23 +1,22 @@
+html { height: 100% }
 body {
     padding-bottom: 0px;
     overflow: hidden;
     height: 100%;
+    width: 100%
 }
-#main { background: #fff; margin: 0 0px 0px 0px }
+
+.main { background: #fff; margin: 0 0px 0px 0px; height: 100%; width: 100% }
 #header { background-color: #eee; font-weight: normal; margin:0; padding:0px; font-size: small }
 
-table { margin: auto; border-collapse: separate; border-spacing: 20px }
-td { vertical-align: top; text-align:center; width: 235px }
-
-pre { text-align: left; overflow: visible }
-code { background-color: #ffc }
-pre code { background-color: #eee }
-
-.pics {  padding:0; margin:0; overflow: hidden }
-.pics div { padding: 15px; border: 1px solid #ccc; background-color: #eee; top:0; left:0 }
+.pics {  padding:0; margin:0; overflow: hidden; height: 100%; width: 100%; }
+.pics div { padding: 10px; border: 1px solid #ccc; background-color: #eee; top:0; left:0;  height: 96%; width: 98% }
 .pics div {
-        -moz-border-radius: 10px; -webkit-border-radius: 10px;
+        -moz-border-radius: 5px; -webkit-border-radius: 5px;
 }
+
+.slide_frame {  height: 100%; width: 100% }
+
 
 #slideshow { margin: 0px auto }
 #main { margin: auto 0px; padding: 0px }

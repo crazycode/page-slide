@@ -1,12 +1,12 @@
 %tr
   %td
-    = h page.title
+    = link_to h(page.title), page.url
   -# %td
   -#  = h page.sub_title
   -# %td
   -#   = h page.hint
   %td
-    = h page.url
+    = link_to h(page.url), page.url
   %td
     = h page.page_type
   %td

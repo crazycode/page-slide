@@ -12,3 +12,5 @@
   = render :partial => 'page', :collection => current_objects
 
 = link_to t('.create_link', :model => Page.human_name), new_object_path
+|
+= link_to '返回展示列表', slides_url
